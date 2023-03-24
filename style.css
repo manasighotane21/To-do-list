@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+:root {
+	--dark: #374151;
+	--darker: #1F2937;
+	--darkest: #111827;
+	/* --grey: #6B7280; */
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family:sans-serif;
+  background-color: #1F2937;
+  color: #fff;
+}
+
+.container{
+  width: 1280px;
+  margin: auto;
+}
+
+#header{
+    justify-content: space-between;
+    padding: 2rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#header h2{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.user_input{
+    margin-top: 3px;
+    flex: 1 1 0%;
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	font-size: 1.25rem;
+}
+
+.user_input input{
+  width: 65%;
+  outline: none;
+  padding: 8px;
+  border: 1px solid black;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
+}
+
+.user_input input:focus{
+  box-shadow: 0 0 5px #E22865;
+  border: 1px solid #E22865;
+}
+
+.user_input button{
+    color: var(--pink);
+	font-size: 1.25rem;
+	font-weight: 700;
+	background-image: linear-gradient(to right, var(--light), var(--purple));
+	-webkit-background-clip: text;
+    border-radius: 2rem;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.user-input button:hover{
+  background-color: transparent;
+  color: white;
+}
+
+#to_do_list{
+  width: 500px;
+  margin: auto;
+}
+
+.item{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  padding: 1rem;
+  margin-top:10px;
+  font-size: 1rem;
+  color: var(--darkest);
+  font-style: italic;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: thistle;
+  border: 1px solid slateblue;
+  text-transform: uppercase;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
+}
+
+.item:hover{
+  box-shadow: 0 0 20px #E22865;
+  border: 1px solid #E22865;
+}
+
+.item i{
+  cursor: pointer;
+  margin: 0 5px;
+  color: green;
+}
+
+@media(max-width:1280px){
+  .container{width: 100%;}
+}
+
+@media(max-width:768px){
+  .container{width: 95%;}
+
+  #header{
+    padding: 20px;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #header h2{margin: 10px 0;}
+
+  .user_input{width: 100%;}
+
+  #to_do_list{width: 100%;}
+}
+
+@media(max-width:480px){
+  .user_input input{width: 74%;}
+}
+
+@media(max-width:320px){
+  .user_input input{width: 60%;}
+}
